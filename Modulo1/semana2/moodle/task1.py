@@ -29,8 +29,10 @@ while True:
                 break
             try:    
                 precio=int(input("Ingrese el precio: "))
+                print("\n---------------------------------------------------")
                 print(f"Producto: {producto} | Cantidades: {cantidad} | Precio: {precio}")
+                print("---------------------------------------------------\n")
                 break
             except ValueError:
                 print("La opcion debe ser un numero") 
-                break            
+                break             
