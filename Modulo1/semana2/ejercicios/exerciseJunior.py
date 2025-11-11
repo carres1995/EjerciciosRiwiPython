@@ -28,3 +28,50 @@ for i in range(repeticion):
         print("¡Excelente ritmo!")
     else:
         print("Repetición X completada")   """ 
+
+"""13. Parqueadero “AutoLoop” – Control de vehículos
+Como vigilante, quiero usar un while que cuente vehículos hasta llegar a 20.
+Si entra un número par, mostrar “Vehículo par registrado”.
+Si el total llega a 20, mostrar “Capacidad completa”."""    
+"""print("Parqueadero “AutoLoop”")   
+vehiculo=0
+while vehiculo <= 20:
+    vehiculo += 1
+    if vehiculo %2 == 0:
+        print(f"Vehiculo par {vehiculo} registrado")
+    if vehiculo == 20:
+        print("Capacidad completa!") """
+
+
+
+"""14. Tienda “Ahorra Más” – Caja registradora básica
+Como cajero, quiero pedir montos de venta hasta que el usuario escriba 0.
+Si la venta supera $100,000, mostrar “Venta destacada”.
+Al final, mostrar el total vendido."""
+"""print("Tienda “Ahorra Más”")     
+acumulado=0
+while True:
+    ventas=float(input("Ingresa valor de la venta: "))
+    acumulado += ventas
+    if ventas >= 100000:
+        print("Venta destada!!")
+    if ventas < 1:
+        print(f"Caja cerrada tus ventas fueron de {acumulado:.0f}")
+        break 
+    print(f"venta de {ventas}") """
+
+"""15. Academia “CodeStart” – Contador de ejercicios completados
+Como estudiante, quiero usar un for del 1 al número que indique.
+Si el número es múltiplo de 5, mostrar “¡Gran avance!”.
+Si no, solo mostrar “Ejercicio X completado”."""            
+"""print("Academia “CodeStart”")
+
+ejercicio=int(input("Numero de ejercicios: "))
+for i in range(ejercicio):
+    i += 1
+    if i %5 == 0:
+        print("Gran avance!!!")
+    else:    
+        print(f'Ejercicio {i} completado')  """  
+
+        
