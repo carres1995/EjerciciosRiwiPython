@@ -70,3 +70,21 @@ for i in range(numero):
     else:
         print("Producto pendiente")  """ 
 
+"""7. Restaurante “Buen Sabor” – Revisión de limpieza
+Como jefe de cocina, quiero usar un for para repetir 3 veces el mensaje “Limpia tu estación”.
+Si es la última vez, mostrar “¡Revisión completada!”."""
+
+"""print("Restaurante “Buen Sabor”")
+for i in range(3):
+    i+=1
+    if i == 3:
+        print("¡Revisión completada!")
+    else:
+        print("Limpia tu estación")  """  
+
+
+lista=[1,2,3,4,5,6,7,8,9]
+
+lista.pop()
+
+print(lista)

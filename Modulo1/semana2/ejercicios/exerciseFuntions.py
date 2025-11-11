@@ -83,8 +83,8 @@ def menuEjercicios():
         elif opcion =='4':
             promedioNotas() 
         elif opcion == '5':
-            hora=float(input('Ingresa la hora: '))
-            verificarTurno(hora)             
+            tiempo=float(input('Ingresa la hora: '))
+            verificarTurno(tiempo)             
         elif opcion == '6':
             break    
         else:
