@@ -1,7 +1,7 @@
 #Este es un ciclo while de validacion en el caso que no cumpla con lo pedido vuelva y pregunte.
 while True:  
     #Estas son variables de entrada  
-    nombre=input("Ingresa nombre producto: ").strip()#este es un metodo que garantiza no enviar inputs vacios
+    nombre=input("Ingresa nombre producto: ").strip()#este es un metodo que garantiza no enviar inputs vacios con la validacion siguiente
     if nombre:
         break
     else:

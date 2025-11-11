@@ -29,6 +29,7 @@ while True:
                 break
             try:    
                 precio=int(input("Ingrese el precio: "))
+                total=cantidad*precio
                 break
             except ValueError:
                 print("La opcion debe ser un numero") 
@@ -36,7 +37,8 @@ while True:
         lista.append({
             "producto": producto,
             "cantidad": cantidad,
-            "precio": precio
+            "precio": precio,
+            "total": total
         })
         print("Lista Creada con exito.")                
     elif ingresa == 2:
@@ -45,7 +47,7 @@ while True:
             else:   
                 print("\n------INVENTARIO-PRODUCTOS------")
                 for item in lista:
-                    print(f" Producto: {item['producto']} | Cantidad: {item['cantidad']} | Precio: ${item['precio']:.0f}")
+                    print(f" Producto: {item['producto']} | Cantidad: {item['cantidad']} | Precio: ${item['precio']:.0f} | Total: {item['total']:.0f}")
                 print("---------------------------------\n")
     elif ingresa == 3:
         pass
