@@ -87,7 +87,8 @@ def menuEjercicios():
             verificarTurno(hora)             
         elif opcion == '6':
             break    
-            
+        else:
+            print('Opcion no valida')    
 
 if __name__ == '__main__':            
     menuEjercicios()        
