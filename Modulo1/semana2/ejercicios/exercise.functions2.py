@@ -9,7 +9,7 @@ def calcular_propina(total_cuenta):
     propina2= 0.15
     if cuenta >= 100000:
         total_cuenta= cuenta + (propina2*cuenta)
-        print(f"Saldo total con propina del 15% {total_cuenta}")
+        print(f"Saldo total con propina del 15% {total_cuenta}") 
     elif cuenta > 0:
         total_cuenta= cuenta + (propina1*cuenta)
         print(f"Saldo total con propina del 10% {total_cuenta}")
