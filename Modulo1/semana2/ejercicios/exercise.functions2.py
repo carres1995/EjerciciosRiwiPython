@@ -3,7 +3,7 @@ Como mesero, quiero una función calcular_propina(total_cuenta) que reciba el va
 Si el total es mayor de $100.000, aplicar el 15%.
 El programa debe mostrar el total final a pagar."""
 #cuenta= float(input("Ingrese valor de la cuenta: "))
-def calcular_propina(total_cuenta):
+"""def calcular_propina(total_cuenta):
     
     propina1= 0.1
     propina2= 0.15
@@ -16,7 +16,7 @@ def calcular_propina(total_cuenta):
     
     else:
         print("Precio no valido")    
-    return total_cuenta    
+    return total_cuenta"""    
 
 #calcular_propina(cuenta)
 

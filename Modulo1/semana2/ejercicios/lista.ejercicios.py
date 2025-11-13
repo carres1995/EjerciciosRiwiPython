@@ -103,10 +103,14 @@ Como agente de soporte, quiero una función buscar_ticket(tickets, codigo) que v
 Si no existe, retorna -1.
 Usa un bucle para confirmar si hay duplicados y contarlos.
 Sugerencia: usa list.index() (maneja excepciones) y/o list.count().'''
-
+tickets=["1234","5678","9123","4567","1234","5678"]
 def buscar_ticket(tickets, codigo):
-    if not codigo:
+    try:
+        indice=tickets.index(codigo)    
+        duplicado=tickets.count(codigo)
+        
+        print(f'El codigo esta en la posicion: {indice} y esta repetido {duplicado} veces.')
+    except ValueError:
+        print("Codigo no existente")    
 
-        print("codigo no existe")
-    else:
-            
+buscar_ticket(tickets, "1234")            
