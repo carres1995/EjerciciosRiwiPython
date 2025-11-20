@@ -4,11 +4,12 @@
 import csv
 import os
 
-ruta = "datos"
+ruta = "Modulo1/week3/moodle/datos"
 
 os.makedirs(ruta, exist_ok=True)
 
 ARC_CSV=ruta + "/datos.csv"
+
 def guardar_csv(inventario):
     try:
         with open(ARC_CSV,"w", newline="", encoding="utf-8") as f:
@@ -23,8 +24,8 @@ def guardar_csv(inventario):
         print(f"Error no ubicado: {e}")               
 
 
-def cargar_csv(productos):
-    productos.clear()
+def cargar_csv():
+    productos= []
     
 
     try:

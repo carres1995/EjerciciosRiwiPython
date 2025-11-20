@@ -6,7 +6,7 @@
 import service
 import archivos 
 
-inventarios= []
+inventarios= archivos.cargar_csv()
 
 def menu():
     while True:
@@ -16,9 +16,7 @@ def menu():
         print("4. Actualizar")
         print("5. Eliminar")
         print("6. Estadisticas")
-        print("7. Guardar CSV")
-        print("8. Cargar csv")
-        print("9. salir")
+        print("7. salir")
         option=(input("Escoge una opcion: "))
         if option == "1":
             nombre=input('\nIngrese nombre del producto: ')
@@ -33,8 +31,8 @@ def menu():
         elif option == "4":
             id=int(input('\nIngrese el ID a actualizar: '))
             nombre=input('\nIngrese nombre del producto: ')
-            precio=float(input('\nIngrese precio del producto: '))
-            cantidad=int(input('\nIngrese cantidad del producto: '))
+            precio=(input('\nIngrese precio del producto: '))
+            cantidad=(input('\nIngrese cantidad del producto: '))
             service.actualizar_producto(inventarios, id, nombre, precio, cantidad)
         elif option == '5':
             id=int(input('\nIngrese el ID a eliminar: '))
@@ -42,22 +40,18 @@ def menu():
         elif option == "6":
             menu_estadisticas()
         elif option == "7":
-            archivos.guardar_csv(inventarios)
-        elif option == "8":
-            archivos.cargar_csv(inventarios)
-        elif option == "9":
             print("Gracias")
             break
         else:
-            print("Opcion no valida")
+            print("Opcion no valida\n")
 
 def menu_estadisticas():
     while True:
-        print("1. Unidades totales")
+        print("\n1. Unidades totales")
         print("2. valor total")
         print("3. producto mas caro")
         print("4. mayor stock")
-        print("5. volver al menu")
+        print("5. volver al menu\n")
         opcion=(input('Ingrese una opcion: ')) 
         if opcion == "1":
             service.unidades_totales(inventarios)

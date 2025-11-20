@@ -10,7 +10,7 @@ import archivos
 def generar_id(inventario):
     if not inventario:
         return 1
-    return max(i["id"] for i in inventario) + 1
+    return max(int(i["id"]) for i in inventario) + 1
 
 def agregar_producto(inventario, nombre, precio, cantidad):
     id=generar_id(inventario)
@@ -23,6 +23,7 @@ def agregar_producto(inventario, nombre, precio, cantidad):
         "total":total
     }
     inventario.append(new)
+    archivos.guardar_csv(inventario)
     print(f"Producto agregado con exito ID: {id}")
     
 def mostrar_inventario(inventario):
@@ -36,12 +37,17 @@ def mostrar_inventario(inventario):
 def buscar_producto(inventario, id):#devuelve dict o none
     if not inventario:
         print("Lista vacia")
-    for i in inventario:
-        if not i['id'] == id:    
-            print(f'ID: {id} no existente')
-        else:
-            print(f'| {i['id']} | {i['producto']} | {i['precio']} | {i['cantidad']} | {i['total']} |')
-    return None             
+        return None
+    try:
+        for i in inventario:
+            if int(i['id']) == id: 
+                print(f'| {i['id']} | {i['producto']} | {i['precio']} | {i['cantidad']} | {i['total']} |') 
+                return i
+    except ValueError:
+        print("ID invalido")    
+        return None   
+    print("ID no existe")
+    return None
 def actualizar_producto(inventario, id, nombre=None, nuevo_precio=None, nueva_cantidad=None):
     producto=buscar_producto(inventario, id)
     if producto is None:
@@ -49,13 +55,19 @@ def actualizar_producto(inventario, id, nombre=None, nuevo_precio=None, nueva_ca
         return
     if nombre is not None and nombre != "":
         producto["producto"] = nombre
-
+        
     if nuevo_precio is not None and nuevo_precio != "":
-        producto["precio"] = float(nuevo_precio)
-
+        try:
+            producto["precio"] = float(nuevo_precio)
+        except ValueError:
+            print("Debe ser un valor numerico")
     if nueva_cantidad is not None and nueva_cantidad != "":
-        producto["cantidad"] = int(nueva_cantidad)
+        try:
+            producto["cantidad"] = int(nueva_cantidad)
+        except ValueError:
+            print("Debe ser un valor numerico")    
     producto["total"] = producto["precio"] * producto["cantidad"]
+    archivos.guardar_csv(inventario)
     print("Producto actualizado corectamente")
     
 def eliminar_producto(inventario, id):

@@ -1,2 +1,5 @@
 id,producto,precio,cantidad,total
-1,sdasd,123.0,23,2829.0
+1,Arroz,2000.0,500,1000000.0
+2,frijol,1200.0,200,240000.0
+3,lentejas,12000.0,1000,12000000.0
+4,garbanzo,1700.0,354,601800.0
