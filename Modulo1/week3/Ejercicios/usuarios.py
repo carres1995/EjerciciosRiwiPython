@@ -1,4 +1,4 @@
-from archivo_csv import crear_archivo, leer_archivo,guardar_usuario
+from archivo_csv import crear_archivo, leer_archivo
 
 
 RUTA_USUARIO="Modulo1/week3/Ejercicios/data/usuarios.csv"

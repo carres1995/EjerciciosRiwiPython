@@ -26,7 +26,7 @@ def leer_archivo(ruta):
         leer=csv.DictReader(a)
         return list(leer)
 
-def guardar_usuario(ruta, lista ,cabeceras):
+def guardar_csv(ruta, lista ,cabeceras):
     with open(ruta, "w", newline="", encoding="utf-8") as a:
         escribir=csv.DictWriter(a, fieldnames=cabeceras)
         escribir.writeheader()
