@@ -1,14 +1,11 @@
-"""app.py
- ├── inventario = []
- ├── menú principal (bucle while)
- ├── llama funciones de servicios.py
- └── llama funciones de archivos.py"""
 import service
 import archivos 
 
-inventarios= archivos.cargar_csv()
+inventarios= archivos.cargar_csv()#variable para leer archivo csv
 
 def menu():
+    """menu interactivo, ciclo que solo cierra cuando se genera un break, solicitando opcion, deacuerdo a la opcion se solicitan las funciones y los argumentos de la funcion en entradas.
+    luego se genera la funcion que indica que lo que se coloque dentro de esa funcion va ser lo que se va a ejecutar"""
     while True:
         print("1. Agregar")
         print("2. Mostrar")
