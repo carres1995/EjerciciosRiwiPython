@@ -130,7 +130,7 @@ def cambiar_estado_solicitud(id_cambio, autorizacion, pr=None, estado=None, equi
 
     guardar_prestamos(pr)
     guardar_equipos(equipo)
-    guardar_estados(estado)
+    #guardar_estados(estado)
     return True
 
 

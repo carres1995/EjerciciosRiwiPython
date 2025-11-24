@@ -1,0 +1,5 @@
+prestamo_id,equipo_id,nombre_equipo,usuario_prestatario,tipo_usuario,fecha_solicitud,fecha_prestamo,fecha_devolucion,dias_autorizados,dias_reales_usados,retraso,estado,mes,anio
+1,2,lapto150 intel,Andres,ESTUDIANTE,2025-11-24,2025-12-10,2025-12-12,3,2,NO,DEVUELTO,12,2025
+2,1,Camara1200g,Felipe,INSTRUCTOR,2025-11-24,2025-12-20,,6,,NO,RECHAZADO,12,2025
+3,1,Camara1200g,Andres,ESTUDIANTE,2025-11-24,2026-01-01,2026-01-10,2,9,SI,DEVUELTO,01,2026
+4,3,hp intel150,Felipe,INSTRUCTOR,2025-11-24,2026-02-10,,5,,NO,APROBADO,02,2026

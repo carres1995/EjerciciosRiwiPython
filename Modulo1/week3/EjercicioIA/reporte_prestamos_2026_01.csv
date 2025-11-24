@@ -1,0 +1,2 @@
+prestamo_id,equipo_id,nombre_equipo,usuario_prestatario,tipo_usuario,dias_autorizados,dias_reales_usados,retraso,estado,mes,anio
+3,1,Camara1200g,Andres,ESTUDIANTE,2,9,SI,DEVUELTO,01,2026
