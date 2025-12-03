@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --main_color: linear-gradient(to right, #7A6B68, #DCE6DC);
+    --text-color: #050505;
+    --font-text: "inter", sans-serif
+
+}
+.body {
+    background-color: var(--main_color);
+    font-family: var(--font-text);
+    color: var(--text-color);
+}
